@@ -1,5 +1,6 @@
 package br.buscape.JuizJokenpo;
 
-public class AppTest {
+public class Juiz {
+
 
 }
