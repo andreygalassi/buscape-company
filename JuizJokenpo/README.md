@@ -12,4 +12,5 @@
 # Executando o projeto
 
 - acessar a pasta target
-- > JuizJokenpo-0.0.1-SNAPSHOT.jar papel pedra
+- > cd target
+- > java -jar JuizJokenpo-0.0.1-SNAPSHOT.jar papel pedra
