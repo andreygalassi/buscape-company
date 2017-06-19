@@ -15,6 +15,22 @@ public class SubmarinoTest {
 		
 		Assert.assertEquals("-1 2 0 NORTE", posicao);
 	}
+	@Test
+	public void deveRetornarPosicaoDoSubmarino2(){
+		
+		Submarino submarino = new Submarino();
+		String posicao = submarino.comando("RMMLMMMDDLL");
+		
+		Assert.assertEquals("2 3 -2 SUL", posicao);
+	}
+	@Test
+	public void deveRetornarPosicaoDoSubmarinoViradoParaLeste(){
+		
+		Submarino submarino = new Submarino();
+		String posicao = submarino.comando("R");
+		
+		Assert.assertEquals("0 0 0 LESTE", posicao);
+	}
 
 	@Test
 	public void deveRetornarNorteApos2VoltasHorarias(){

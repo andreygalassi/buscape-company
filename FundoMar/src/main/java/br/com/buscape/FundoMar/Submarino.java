@@ -14,11 +14,28 @@ import br.com.buscape.FundoMar.comando.Navegador;
 public class Submarino {
 	
 	private Integer x=0,y=0,z=0;
-	private Direcao direcao = Direcao.NORTE;
 	private List<Navegador> comandos;
+	private Direcao direcaoAtual = Direcao.NORTE;
+	private int posicao;
+	private List<Direcao> fila;
 	
 	public String comando(String string) {
 		comandos = new ArrayList<>();
+		converteComandos(string);
+		for (Navegador navegador : comandos) {
+			navegador.navegar();
+		}
+		
+		StringBuilder sb = new StringBuilder();
+		sb.append(x).append(" ");
+		sb.append(y).append(" ");
+		sb.append(z).append(" ");
+		sb.append(direcaoAtual.name());
+		System.out.println(sb.toString());
+		return sb.toString();
+	}
+
+	private void converteComandos(String string) {
 		for (Character c : string.toCharArray()) {
 			switch (c) {
 			case 'L':
@@ -40,24 +57,7 @@ public class Submarino {
 				break;
 			}
 		}
-		for (Navegador navegador : comandos) {
-			navegador.navegar();
-		}
-		
-		StringBuilder sb = new StringBuilder();
-		sb.append(x).append(" ");
-		sb.append(y).append(" ");
-		sb.append(z).append(" ");
-		sb.append(direcao.name());
-		
-		System.out.println(sb.toString());
-		
-		return sb.toString();
 	}
-	
-	private Direcao direcaoAtual;
-	private int posicao;
-	private List<Direcao> fila;
 	
 	private void montarLista() {
 		if (fila==null){
@@ -116,14 +116,6 @@ public class Submarino {
 
 	public void removeZ(){
 		--z;
-	}
-
-	public Direcao getDirecao() {
-		return direcao;
-	}
-
-	public void setDirecao(Direcao direcao) {
-		this.direcao = direcao;
 	}
 
 }
