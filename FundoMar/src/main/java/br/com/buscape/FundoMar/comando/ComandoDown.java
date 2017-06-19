@@ -12,8 +12,7 @@ public class ComandoDown implements Navegador {
 
 	@Override
 	public void navegar() {
-		// TODO Auto-generated method stub
-		
+		submarino.removeZ();
 	}
 
 }

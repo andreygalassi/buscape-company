@@ -12,8 +12,7 @@ public class ComandoRight implements Navegador {
 
 	@Override
 	public void navegar() {
-		// TODO Auto-generated method stub
-		
+		submarino.direita();
 	}
 
 }

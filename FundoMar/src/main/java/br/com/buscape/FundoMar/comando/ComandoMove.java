@@ -12,8 +12,23 @@ public class ComandoMove implements Navegador {
 
 	@Override
 	public void navegar() {
-		// TODO Auto-generated method stub
-		
+		switch (submarino.direcaoAtual()) {
+		case NORTE:
+			submarino.adicionaY();
+			break;
+		case SUL:
+			submarino.removeY();
+			break;
+		case LESTE:
+			submarino.adicionaX();
+			break;
+		case OESTE:
+			submarino.removeX();
+			break;
+
+		default:
+			break;
+		}
 	}
 
 }

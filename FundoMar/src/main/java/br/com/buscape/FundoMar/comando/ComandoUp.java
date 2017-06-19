@@ -12,8 +12,7 @@ public class ComandoUp implements Navegador {
 
 	@Override
 	public void navegar() {
-		// TODO Auto-generated method stub
-		
+		submarino.adicionaZ();
 	}
 
 }
