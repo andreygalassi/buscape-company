@@ -1,4 +1,4 @@
-package br.com.buscape.FundoMar;
+package br.com.buscape.FundoMar.comando;
 
 public interface Navegador {
 	void navegar();

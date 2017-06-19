@@ -1,13 +1,10 @@
 package br.com.buscape.FundoMar;
 
-/**
- * Hello world!
- *
- */
-public class App 
-{
-    public static void main( String[] args )
-    {
-        System.out.println( "Hello World!" );
+import br.com.buscape.FundoMar.comando.Direcao;
+
+public class App {
+    
+	public static void main( String[] args ) {
+
     }
 }
