@@ -19,9 +19,10 @@ public class Submarino {
 	private int posicao;
 	private List<Direcao> fila;
 	
-	public String comando(String string) {
+	public String comando(String comando) {
+		if (comando==null) comando="";
 		comandos = new ArrayList<>();
-		converteComandos(string);
+		converteComandos(comando);
 		for (Navegador navegador : comandos) {
 			navegador.navegar();
 		}
@@ -31,7 +32,7 @@ public class Submarino {
 		sb.append(y).append(" ");
 		sb.append(z).append(" ");
 		sb.append(direcaoAtual.name());
-		System.out.println(sb.toString());
+
 		return sb.toString();
 	}
 
@@ -103,6 +104,7 @@ public class Submarino {
 	}
 
 	public void adicionaZ(){
+		if (z!=0)
 		++z;
 	}
 

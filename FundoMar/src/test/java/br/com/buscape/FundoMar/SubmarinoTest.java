@@ -12,7 +12,7 @@ public class SubmarinoTest {
 		
 		Submarino submarino = new Submarino();
 		String posicao = submarino.comando("LMRDDMMUU");
-		
+		System.out.println(posicao);
 		Assert.assertEquals("-1 2 0 NORTE", posicao);
 	}
 	@Test
@@ -20,7 +20,7 @@ public class SubmarinoTest {
 		
 		Submarino submarino = new Submarino();
 		String posicao = submarino.comando("RMMLMMMDDLL");
-		
+		System.out.println(posicao);
 		Assert.assertEquals("2 3 -2 SUL", posicao);
 	}
 	@Test
@@ -28,8 +28,16 @@ public class SubmarinoTest {
 		
 		Submarino submarino = new Submarino();
 		String posicao = submarino.comando("R");
-		
+		System.out.println(posicao);
 		Assert.assertEquals("0 0 0 LESTE", posicao);
+	}
+	@Test
+	public void deveRetornarPosicaoEmZZeroQuandoComandoUpAcimaDoMar() {
+		
+		Submarino submarino = new Submarino();
+		String posicao = submarino.comando("UUU");
+		System.out.println(posicao);
+		Assert.assertEquals("0 0 0 NORTE", posicao);
 	}
 
 	@Test
